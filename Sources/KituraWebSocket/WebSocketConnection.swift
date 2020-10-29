@@ -428,7 +428,7 @@ extension WebSocketCloseReasonCode {
 
 extension WebSocketErrorCode {
     func protocolErrorIfInvalid() -> WebSocketErrorCode {
-        //https://github.com/IBM-Swift/Kitura-WebSocket/pull/36
+        //https://github.com/Kitura-Next/Kitura-WebSocket/pull/36
         if case .unknown(let code) = self, code < 3000 {
             return .protocolError
         }
